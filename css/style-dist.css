@@ -20,3 +20,11 @@ body {
   width: calc(100% - 24px);
   transform: translate(-50%, -50%);
 }
+
+.space {
+  margin-top: 16px;
+}
+
+.space-1 {
+  margin-top: 8px;
+}
