@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway';
+}
+
+html,
+body {
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.content {
+  top: 50%;
+  left: 50%;
+  display: block;
+  max-width: 920px;
+  position: absolute;
+  width: calc(100% - 24px);
+  transform: translate(-50%, -50%);
+}
