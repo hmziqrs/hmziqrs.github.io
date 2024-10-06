@@ -1,22 +1,21 @@
+import { FaGithubAlt, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 export const username = 'hmziqrs';
-
-// socials links (github, x, linkedin) with icons
 
 export const links = [
   {
-    name: 'GitHub',
+    name: 'github',
     url: `https://github.com/${username}`,
-    icon: 'github-icon',
+    Icon: FaGithubAlt,
   },
   {
-    name: 'X',
+    name: 'X (twitter)',
     url: `https://x.com/${username}`,
-    icon: 'x-icon',
+    Icon: FaXTwitter,
   },
   {
     name: 'LinkedIn',
     url: `https://linkedin.com/in/${username}`,
-    icon: 'linkedin-icon',
+    Icon: FaLinkedin,
   },
 ];
 
