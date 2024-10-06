@@ -8,14 +8,18 @@ export const links = [
     Icon: FaGithubAlt,
   },
   {
-    name: 'X (twitter)',
+    name: 'x (twitter)',
     url: `https://x.com/${username}`,
     Icon: FaXTwitter,
   },
   {
-    name: 'LinkedIn',
+    name: 'linkedin',
     url: `https://linkedin.com/in/${username}`,
     Icon: FaLinkedin,
   },
 ];
+
+
+
+
 
