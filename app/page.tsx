@@ -10,7 +10,7 @@ export default function Home() {
             Busy building and accelerating
           </h1>
           <div className="h-2" />
-          <p>more updates soon!</p>
+          <p>more updates coming soon!</p>
           <div className="h-4" />
           <p className="text-lg sm:text-xl">follow @{username}</p>
         </div>
@@ -19,4 +19,6 @@ export default function Home() {
     </div>
   );
 }
+
+
 
