@@ -2,24 +2,16 @@ name: Deploy Next.js site to GitHub Pages
 
 on:
   push:
-    branches: ["master"]  # Set a branch name to trigger deployment
-  workflow_dispatch:      # Allow manual triggering
+    branches: ["master"]
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
   build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,17 +26,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
       - name: Build with Next.js
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "hackerhgl@gmail.com"
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        run: |
+          git checkout --orphan gh-pages
+          git reset --hard
+          mv out/* .
+          rm -rf out
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push origin gh-pages --force
