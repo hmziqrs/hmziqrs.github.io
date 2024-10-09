@@ -3,22 +3,64 @@ import SocialLinks from './socials';
 
 export default function Home() {
   return (
-    <div className="dark:bg-gray-900 dark:text-white grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start font-[family-name:var(--font-geist-mono)]">
-        <div className="list-inside list-decimal text-sm text-center sm:text-left">
-          <h1 className="text-2xl md:text-4xl sm:text-3xl">
-            Busy building and accelerating
-          </h1>
-          <div className="h-2" />
-          <p>more updates coming soon!</p>
-          <div className="h-4" />
-          <p className="text-lg sm:text-xl">follow @{username}</p>
-        </div>
-        <SocialLinks />
-      </main>
-    </div>
+    <main className="fixed h-full w-full flex flex-col items-center justify-center bg-red-900 font-[family-name:var(--font-geist-mono)]">
+      <div className="text-center sm:text-left">
+        <h1 className="text-3xl md:text-5xl sm:text-4xl">
+          Busy building and accelerating
+        </h1>
+        <div className="h-2" />
+        <p className="text-sm">more updates coming soon!</p>
+        <div className="h-4" />
+        <p className="text-lg sm:text-xl">follow @{username}</p>
+        <div className="h-4" />
+      </div>
+      <SocialLinks />
+    </main>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

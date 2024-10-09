@@ -1,9 +1,9 @@
 import React from 'react';
 import { links } from './data';
 
-function SocialLinks() {
+export default function SocialLinks() {
   return (
-    <div className="flex flex-row self-stretch space-x-5">
+    <div className="flex flex-row space-x-5">
       {links.map(({ name, url, Icon }) => (
         <a
           target="_blank"
@@ -19,5 +19,7 @@ function SocialLinks() {
   );
 }
 
-export default SocialLinks;
+
+
+
 
