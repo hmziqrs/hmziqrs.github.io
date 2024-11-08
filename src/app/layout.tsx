@@ -30,18 +30,23 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <link
-          rel="icon"
-          type="image/png"
-          href="./icons/favicon-48x48.png"
-          sizes="48x48"
-        />
-        <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg" />
-        <link rel="shortcut icon" href="./icons/favicon.ico" />
-        <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="./icons/apple-touch-icon.png"
+          href="/fav/apple-touch-icon.png"
         />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/fav/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/fav/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/fav/site.webmanifest" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-zinc-900 dark:text-white`}
