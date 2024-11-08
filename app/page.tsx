@@ -1,5 +1,5 @@
-import { username } from './data';
-import SocialLinks from './socials';
+import { username } from "./data";
+import SocialLinks from "./socials";
 
 export default function Home() {
   return (
@@ -16,15 +16,3 @@ export default function Home() {
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
