@@ -5,17 +5,17 @@ export const username = "hmziqrs";
 
 export const links = [
   {
-    name: "github",
+    name: `@${username}`,
     url: `https://github.com/${username}`,
     Icon: SiGithub,
   },
   {
-    name: "x (twitter)",
+    name: `@${username}`,
     url: `https://x.com/${username}`,
     Icon: SiX,
   },
   {
-    name: "linkedin",
+    name: `/in/${username}`,
     url: `https://linkedin.com/in/${username}`,
     Icon: SiLinkedin,
   },
