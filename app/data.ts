@@ -1,25 +1,27 @@
-import { FaGithubAlt, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
-export const username = 'hmziqrs';
+import { SiGithub, SiLinkedin, SiX } from "@icons-pack/react-simple-icons";
+import { Globe } from "lucide-react";
+
+export const username = "hmziqrs";
 
 export const links = [
   {
-    name: 'github',
+    name: "github",
     url: `https://github.com/${username}`,
-    Icon: FaGithubAlt,
+    Icon: SiGithub,
   },
   {
-    name: 'x (twitter)',
+    name: "x (twitter)",
     url: `https://x.com/${username}`,
-    Icon: FaXTwitter,
+    Icon: SiX,
   },
   {
-    name: 'linkedin',
+    name: "linkedin",
     url: `https://linkedin.com/in/${username}`,
-    Icon: FaLinkedin,
+    Icon: SiLinkedin,
+  },
+  {
+    name: "Resume",
+    url: `https://cv.hmziq.rs`,
+    Icon: Globe,
   },
 ];
-
-
-
-
-
