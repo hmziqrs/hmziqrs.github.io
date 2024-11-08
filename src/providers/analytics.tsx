@@ -1,11 +1,12 @@
 "use client";
-
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { logEvent } from "firebase/analytics";
 import { useFirebase } from "@/hooks/use-firebase";
+import { Suspense } from "react";
 
-export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
+// Separate component that uses useSearchParams
+function AnalyticsTracker() {
   const { analytics } = useFirebase();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -21,5 +22,16 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
     }
   }, [analytics, pathname, searchParams]);
 
-  return <>{children}</>;
+  return null;
+}
+
+export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Suspense>
+        <AnalyticsTracker />
+      </Suspense>
+      {children}
+    </>
+  );
 }
