@@ -1,10 +1,11 @@
 import React from "react";
 import { links } from "@/data/personal";
+import Link from "next/link";
 export default function SocialLinks() {
   return (
     <div className="flex flex-row flex-wrap gap-4">
       {links.map(({ name, url, Icon }) => (
-        <a
+        <Link
           target="_blank"
           key={url}
           href={url}
@@ -14,7 +15,7 @@ export default function SocialLinks() {
         >
           <Icon className="size-3.5 sm:size-4" />
           <span className="text-xs sm:text-sm">{name}</span>
-        </a>
+        </Link>
       ))}
     </div>
   );
