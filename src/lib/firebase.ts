@@ -1,6 +1,7 @@
 // src/lib/firebase.ts
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
+import { getPerformance } from "firebase/performance";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,
@@ -18,13 +19,14 @@ export const initFirebase = async () => {
     const analyticsSupported = await isSupported();
 
     if (analyticsSupported) {
+      const perf = getPerformance(app);
       const analytics = getAnalytics(app);
-      return { app, analytics };
+      return { app, analytics, perf };
     }
 
-    return { app, analytics: null };
+    return { app, analytics: null, perf: null };
   } catch (error) {
     console.error("Firebase initialization error:", error);
-    return { app: null, analytics: null };
+    return { app: null, analytics: null, perf: null };
   }
 };
