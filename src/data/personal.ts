@@ -1,4 +1,4 @@
-import { SiGithub, SiLinkedin, SiX } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiTelegram, SiX } from "@icons-pack/react-simple-icons";
 import { Globe } from "lucide-react";
 
 export const username = "hmziqrs";
@@ -15,13 +15,18 @@ export const links = [
     Icon: SiX,
   },
   {
-    name: `/in/${username}`,
-    url: `https://linkedin.com/in/${username}`,
-    Icon: SiLinkedin,
+    name: `@${username}`,
+    url: `https://t.me/${username}`,
+    Icon: SiTelegram,
   },
-  {
-    name: "Resume",
-    url: `https://cv.hmziq.rs`,
-    Icon: Globe,
-  },
+  // {
+  //   name: `/in/${username}`,
+  //   url: `https://linkedin.com/in/${username}`,
+  //   Icon: SiLinkedin,
+  // },
+  // {
+  //   name: "Resume",
+  //   url: `https://cv.hmziq.rs`,
+  //   Icon: Globe,
+  // },
 ];
