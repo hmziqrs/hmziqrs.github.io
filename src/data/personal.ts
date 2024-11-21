@@ -1,5 +1,4 @@
 import { SiGithub, SiTelegram, SiX } from "@icons-pack/react-simple-icons";
-import { Globe } from "lucide-react";
 
 export const username = "hmziqrs";
 
